@@ -1,0 +1,534 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+
+/*   ----Home Page----   */
+html{
+    scroll-behavior: smooth;
+}
+body
+{
+    line-height:1.5;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.main-container
+{
+    overflow-x: hidden;
+    
+}
+
+.menubar
+{
+    width: 270px;
+    background: #323131;
+    height: 100%;
+    position: fixed;
+    padding: 30px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+ul{
+    list-style: none;
+}
+ul img{
+    height: 16px;
+    width: 16px;
+}
+.menubar .logo
+{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.menubar .logo a{
+    color: white;
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: relative;
+}
+.menubar .logo a span
+{
+    font-family:'Calligraffitti',cursive;
+    font-family: 40px;
+    font-size: 35px;
+    color: red;
+}
+.menubar .logo a::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 7px solid red;
+    border-left: 7px solid red;
+}
+.menubar .logo a::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-top: 7px solid red;
+    border-right: 7px solid red;
+}
+
+.menubar .nav{
+    margin-top: 50px;
+}
+.menubar .nav li a
+{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: white;
+    padding: 5px 15px;
+    border-bottom: 1px solid black;
+}
+.menubar .nav li
+{
+    margin-bottom: 20px;
+}
+.menubar .nav li img
+{
+    width: 20px;
+    height: 20px;
+}
+
+/*   --- home ---   */
+
+.home
+{
+    display: block;
+    margin-left: 270px;
+    top: 0;
+    right: 0;
+    
+}
+.home-container
+{
+    max-width: 1100px;
+    width: 100%;
+    margin-left: 20px;
+}
+.home-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+.home-img img
+{
+    height: 450px;
+    width: 450px;
+    padding: 15px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+    text-align: center;
+}
+.home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-top: 300px;
+}
+h3.hello
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+h3.hello .name
+{
+    font-size: 40px;
+    font-weight: 700;
+    color: red;
+}
+h3.work
+{
+    font-weight: 600;
+    font-size:25px;
+    
+}
+
+.work .typing1
+{
+    font-size: 30px;
+    color: red;
+    border-right: 5px solid;
+    animation: 
+            typing 2s,
+            cursor .4s step-end infinite alternate;
+}
+@keyframes cursor{ 50%{ border-color: transparent;}}
+@keyframes typing{ from {width: 0;}}
+.home-img::after
+{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid #ff0000;
+    border-right: 10px solid red;
+    right: 0px;
+    bottom: 0px;
+}
+.home-img::before
+{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid red;
+    border-left: 10px solid red;
+    
+}
+
+
+
+/*     ----About----     */
+.about
+{
+    padding: 0 20px;
+    background-color: black;
+    margin-left: 270px;
+}
+.about-row
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.sub-title
+{
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+.about-row-1 p
+{
+    color: white;
+    font-size: 18px;
+}
+.about-row-2
+{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.about-row-links
+{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.about-row-links::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.about-row-links.active-link::after
+{
+    width: 50%;
+}
+.about-contents ul li
+{
+    list-style: none;
+    margin: 10px 0;
+}
+.about-contents ul li span
+{
+    color: #b54769;
+    font-size: 20px;
+}
+meter
+{
+    height: 40px;
+    width: 300px;
+    
+}
+meter::-webkit-meter-optimum-value
+{
+    background: rgb(255, 184, 196);
+}
+.about-contents
+{
+    display: none;
+}
+.about-contents.active-tab
+{
+    display: block;
+}
+
+
+/*    -----Services-----    */
+.services
+{
+    padding: 30px 20px;
+    
+    margin-left: 270px;
+}
+.services-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.services-list div img
+{
+    height: 60px;
+    width: 60px;
+}
+.services-list div h2
+{
+    color: white;
+    
+}
+.services-list div
+{
+    background-color: rgb(58, 53, 53);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div p
+{
+    padding: 15px;
+}
+.services-list div:hover
+{
+    background-color: #ff0000;
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+
+/*       -----Portfolio-----      */
+.portfolio
+{
+    padding: 30px 20px;
+    margin-left: 270px;
+}
+.work img
+{
+    height: 500px;
+    width: 330px;
+    transition: transform 0.5s;
+}
+.work-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 80px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.work
+{ 
+    height: 500px;
+    width: 330px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.layer a img
+{
+    height: 30px;
+    width: 30px;
+}
+.layer
+{
+    width: 100%;
+    height: 0;
+    background-image:linear-gradient(rgba(20, 18, 18, 0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3
+{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.layer a
+{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6px;
+}
+.work:hover img
+{
+    transform: scale(1.1);
+}
+.work:hover .layer
+{
+    height: 100%;
+}
+
+
+/*    ----Contact----    */
+.contact
+{
+    padding: 30px 20px;
+    margin-left: 270px;
+}
+.contact-row
+{
+    display: flex;
+    flex-direction:column;
+}
+.contact-left
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+.contact-phone
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-sub-title
+{
+    text-align: center;
+}
+.contact-right
+{
+    margin-top: 30px;
+}
+.contact-form 
+{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.contact-form div
+{
+    padding: 20px;
+}
+input
+{
+    height:30px;
+}
+.contact-form div button
+{
+    height:50px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    background-color: #ff004f;
+    color: white;
+}
+.contact-form div button:hover
+{
+    background-color: white;
+    color: black;
+}
+.contact-form div input
+{
+    margin: 10px;border: none;
+    border-radius: 6px;
+    padding-left: 10px;
+    background-color: #323131;
+}
+.contact-form div textarea
+{
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #323131;
+    border: none;
+}
+textarea::placeholder 
+{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*   ---copyright---   */
+.copyright
+{
+    padding: 30px 20px;
+    margin-left: 270px;
+    background-color: #141313;
+}
+.copyright p
+{
+    text-align: center;
+}
+
+
+/*     ----CSS for small screens-----    */
+@media only screen and (max-width: 600px)
+{
+    
+}
